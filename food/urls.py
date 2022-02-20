@@ -8,5 +8,4 @@ urlpatterns=[
     path('additems/', views.additems.as_view(), name='additems'),
     path('edititem/<itemid>/', views.edititem, name='edititem'),
     path('deleteitem/<itemid>/', views.deleteitem, name='deleteitem'),
-    # path('additems/', views.additems, name='additems'),
 ]
