@@ -1,0 +1,16 @@
+{%extends 'food/base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}<title>User Profile Page</title>{% endblock title %}
+</head>
+<body>
+    {%block body%}
+    <h3>{{user.username}}</h3>
+    <img width="70px" height="70px" src="{{ user.profile.image.url }}" >
+    {%endblock%}
+</body>
+</html>
