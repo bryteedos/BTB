@@ -1,0 +1,15 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}<title>Delete Page</title>{% endblock title %}
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <h2>Are you sure you want to delete {{items.itemname}}<br>{{items.itemdesc}}<br>${{items.itemprice}}</h2>  
+        <button type="submit">Confirm</button>
+    </form>
+</body>
+</html>

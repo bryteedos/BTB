@@ -1,0 +1,27 @@
+{%extends 'food/base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}<title>Detail Page</title>{% endblock title %}
+</head>
+<body>
+    {%block body%} 
+    <div class="container">
+        <div class="row">        
+            <div class="col-md-6">
+                <img height="300px" src="{{items.itemimage}}" class="card"/>
+            </div>
+            <div class="col-md-6">            
+                <h2>{{items.itemname}}</h2>
+                <h4>{{items.itemdesc}}</h4>
+                <h3>${{items.itemprice}}</h3>
+                <a href="{% url 'deleteitem' items.id %}" class="btn btn-danger">Delete</a>                
+            </div>            
+        </div>
+    </div>
+    {%endblock%}
+</body>
+</html>

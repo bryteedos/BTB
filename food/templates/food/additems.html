@@ -1,0 +1,47 @@
+{%extends 'food/base.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%block title%}<title>Add Items</title>{%endblock title%}
+</head>
+<body>
+    {%block body%}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <div class="card-title offset-md-5">
+                            Add Item                            
+                        </div>
+                    </div>
+                    <div class="card-body">                        
+                        <form method="post">
+                            {% csrf_token %}
+                            {%for field in form%}
+                            <div class="form-group offset-md-2">
+                                {{field.name|title}}
+                                <br>
+                                {{field}}
+                            </div>
+                            {%endfor%} 
+                            <br>                           
+                            <button class="btn-success offset-md-5" type="submit">Add Item</button>
+                        </form>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {%endblock%}
+</body>
+</html>
+
+
+
+
+
+
+
